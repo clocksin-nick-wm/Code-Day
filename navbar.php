@@ -7,9 +7,9 @@
         <div id="nav">
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
+            <li><a href="#">User Usage</a></li>
+            <li><a href="#">User Rewards</a></li>
+            <li><a href="#">Settings</a></li>
         </ul>
         </div>
     </div>
