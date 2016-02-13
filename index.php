@@ -24,7 +24,12 @@
         </ul>
     </div>
 </nav>
+<canvas id="myChart" width="400" height="400"></canvas>
 
+<script src="Chart.js-master/Chart.js">
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myNewChart = new Chart(ctx).PolarArea(data);
+</script>
 <script type="text/javascript"  src="jquery.js"></script>
 </body>
 </html>
