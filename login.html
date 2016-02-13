@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Log In Page</title>
     <link href="LoginPage.css" rel="stylesheet" type="text/css">
     <script src="scripts.js" type="text/javascript"></script>
@@ -12,6 +11,9 @@
     <style>
         div{
             overflow: hidden;
+        }
+        body {
+            background-color: #F1F1F1;
         }
     </style>
 </head>
@@ -32,23 +34,26 @@
         </div>
     </nav>
 </div>
-<div id="signin" style="background-color: cornflowerblue; height: 850px; width: auto; margin-top:-20px;">
-    <p>test</p>
-    <div id="picture" style="background-color: crimson; height: 700px; width: 1400px; margin-top: 2%; margin-left: 2%;">
-        <p>tes22</p>
+<div id="signin" style="height: 850px; width: auto; margin-top:-20px; min-width: 700px;">
+    <div id="picture" style="height: auto; width: 1400px; max-width: 75%; margin-top: 2%; margin-left: 2%; z-index:0;">
+        <img src="http://i.stack.imgur.com/JnqQa.jpg" style="height: 100%; width: 100%;">
     </div>
-    <div id="form" style="background-color: deeppink; height: 700px; width: 400px; float: right; margin-top: -36.5%; margin-right: 3%;">
-        <form id="msform" method="post">
-
-            <fieldset>
-                <h2 class="fs-title">Personal Info</h2>
-                <h3 class="fs-subtitle">Step 1</h3>
+    <div id="form" style="height: 700px; width: 400px; float: right; top: 150px; right:50px; z-index: 1; position:absolute;">
+        <form id="msform" method="post" style="height: 700px; width: 400px; float: left;">
+            <fieldset style="height: 700px; width: 400px; margin-top: -12.5%; margin-left: -.1%;">
+                <h3 class="fs-subtitle" style="font-size: 50px;">Sign Up</h3>
+                <br>
                 <input type="text" name="firstname" placeholder="First Name" />
+                <br><br>
                 <input type="text" name="lastname" placeholder="Last Name" />
+                <br><br>
                 <input type="number" name="phonenumber" placeholder="Phone Number" />
+                <br><br>
                 <input type="text" name="email" placeholder="Email"/>
+                <br><br>
                 <input type="number" name="Password" placeholder="Password"/>
-                <input type="submit" name="formSubmit" value="Submit" >
+                <br><br>
+                <input type="submit" name="formSubmit" value="Submit" onclick="newPage2()"/>
             </fieldset>
 
         </form>
