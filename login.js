@@ -4,3 +4,6 @@
 function newPage() {
     window.open("/");
 }
+function newPage2() {
+    window.open("/");
+}
