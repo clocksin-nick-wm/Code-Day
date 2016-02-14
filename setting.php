@@ -65,7 +65,7 @@ if(@$_POST['changeSubmit']) {
             <br><br>
             <input type="number" name="points" placeholder="Point Increment" />
             <br><br>
-            <button type="submit" name="changeSubmit" value="1" style="width: 174px; text-align: center; height:45px;>Submit</button>
+            <button type="submit" name="changeSubmit" value="1" style="width: 174px; text-align: center; height:45px;">Submit</button>
         </fieldset>
     </form>
 </div>
