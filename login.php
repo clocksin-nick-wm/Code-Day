@@ -2,8 +2,8 @@
 
 require_once('connect.php');
 
-$username = mysqli_real_escape_string($_POST['username']);
-$password = mysqli_real_escape_string($_POST['password']);
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 $errorMessage = "";
 if(empty($_POST['username']))
