@@ -19,7 +19,7 @@ $result = mysqli_query($mysqli, $query);
 include('navbar.php')
 ?>
 <style>
-    td, tr {
+    td, th {
         padding: 6%;
     }
 </style>
