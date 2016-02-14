@@ -13,6 +13,9 @@ $result = mysqli_query($mysqli, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery.js" type="text/javascript"></script>
     <script src="scripts-mobile.js" type="text/javascript"></script>
+    <style>
+
+    </style>
 </head>
 <body>
 <div id="header">
