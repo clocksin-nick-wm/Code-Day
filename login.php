@@ -35,7 +35,7 @@ if($users > 0) {
 
     if($mobile == true) {
         $_SESSION["mobile_user_id"] = $row['id'];
-        header("location: ./mobileHeader.php");
+        header("location: ./index-mobile.php");
     }else {
 
         $_SESSION["user_id"] = $row['id'];
