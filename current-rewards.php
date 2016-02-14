@@ -56,8 +56,7 @@ include('navbar.php');
                 echo "<td><form method='post'><input type='hidden' name='reward_to_delete' value='$rewardname' /><button class='alert alert-danger' type='submit' name='removeButton'>Remove</button></td>";
                 echo '</tr>';
 
-                    
-                }
+                
             }
         } else {
             echo "0 results";
