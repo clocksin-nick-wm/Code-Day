@@ -15,6 +15,12 @@ else {
     }
 }
 
+$user_query = "SELECT * FROM useraffiliation WHERE client_id= {$_SESSION['client_id']} AND user_id= {$code}";
+$user_rows = mysqli_num_rows(mysqli_query($mysqli))
+
+
+//$available_awards_query = "SELECT * FROM rewards where ";
+
 
 
 ?>
@@ -31,9 +37,21 @@ else {
 <body style="background-color: white;">
 <center>
     <h3 id="fs-subtitle" style="font-family: 'Pacifico', cursive; color: #36abcf;" >Points</h3>
-    <input type="text" id="ammountSpent" placeholder="Ammount Spent">
-    <button class="btn" id="scanNew" style="width: 174px; text-align: center; height:45px;">Scan New</button>
+    <h3 style="font-family:sans-serif">
+    <form method="post" id="transaction_form">
+        <input type="text" id="ammountSpent" placeholder="Ammount Spent">
+        <input type="submit" value="Confirm" class="btn" id="scanNew" style="width: 174px; text-align: center; height:45px;">
+    </form>
+    <div id="available_rewards">
+        filler data
+    </div>
 </center>
 </form>
 </body>
+<script>
+$(document).ready(function() {
+    $("#transaction_form").hide();
+    $("#available_rewards").hide();
+});
+</script>
 </html>

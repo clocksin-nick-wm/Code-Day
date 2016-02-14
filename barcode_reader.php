@@ -10,8 +10,8 @@
 </head>
 <body style="background-color: white;">
     <center>
-        <h3 id="fs-subtitle" style="font-family: 'Pacifico', cursive; color: #36abcf;" >Points</h3>
-        <button class="btn" id="scanNew" style="width: 174px; text-align: center; height:45px;">Scan New</button>
+        <h3 id="fs-subtitle" style="font-family: 'Pacifico', cursive; color: #36abcf;" >Points</h3><br/><br/>
+        <button class="btn" id="scanNew" style="width: 174px; text-align: center; height:45px;">Submit</button>
     </center>
 </form>
 </body>
