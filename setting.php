@@ -5,14 +5,11 @@ require_once("connect.php");
 
 $client_id = $_SESSION['client_id'];
 $email = $_POST['email'];
-$password = str_replace("'", "", $_POST['Password']);
-$points = str_replace("'", "", $_POST['points']);
+$password = $_POST['Password']);
+$points = $_POST['points']);
 
 if(@$_POST['changeSubmit']) {
-
-    $query = "UPDATE useraffiliation SET email = {$email} WHERE client_id= {$client_id}";
-
-    $query = mysqli_query($mysqli, $query);
+    $query = "UPDATE client SET email = {$email} SET password = {$password} SET points = {$points} WHERE client_id = {$client_id}";
 }
 ?>
 <!DOCTYPE html>
