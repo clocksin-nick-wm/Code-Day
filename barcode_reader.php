@@ -3,8 +3,8 @@
         <title>Barcode Scanner</title>
         <script src="https://raw.githubusercontent.com/andrastoth/WebCodeCam/master/js/WebCodeCam.min.js" type="text/javascript"></script>
         <script src="./jquery.js" type="text/javascript"></script>
-        <script src="https://raw.githubusercontent.com/andrastoth/WebCodeCam/master/js/qrcodelib.js" type="text/javascript"></script>
-        <script src="https://raw.githubusercontent.com/andrastoth/WebCodeCam/master/js/DecoderWorker.js" type="text/javascript"></script>
+        <script src="./qrcodelib.js" type="text/javascript"></script>
+        <script src="./DecoderWorker.js" type="text/javascript"></script>
     </head>
     <body>
         <div style="container">
