@@ -55,7 +55,7 @@ include('navbar.php');
                 echo "<td>$rewardname</td>";
                 echo "<td>$valuepoints</td>";
                 echo "<td>$rewarddescription</td>";
-                echo "<td><form method='post'><input type='hidden' name='reward_to_delete' value='$rewardname' /><button class='alert alert-danger' type='submit' name='removeButton'>Remove</button></td>";
+                echo "<td><form method='post'><input type='hidden' name='reward_to_delete' value='$rewardname' /><button class='alert alert-danger' type='submit' name='removeButton'>Remove</button></form></td>";
                 echo '</tr>';
 
 
