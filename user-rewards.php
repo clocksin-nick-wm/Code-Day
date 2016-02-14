@@ -22,6 +22,9 @@ include('navbar.php')
     td, th {
         padding: 6%;
     }
+    td {
+        text-align: center;
+    }
 </style>
 <div id="userRewards">
     <table id="userRewardsTable">
