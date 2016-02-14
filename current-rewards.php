@@ -51,7 +51,9 @@ include('navbar.php');
 
             }
         } else {
-            echo "0 results";
+            echo '<tr>';
+            echo "<td>0 results</td>";
+            echo '</tr>';
         }
         ?>
         </table>
