@@ -1,10 +1,10 @@
 <?php
+require_once('connect.php');
 
 session_start();
 
-$stmt = $dbh->prepare("SELECT * FROM useraffiliation INNER JOIN client ON client.id = useraffiliation.client_id WHERE user_id = :user_id");
-$stmt->execute(array(':user_id' => $_SESSION['user_id']));
-$results = $stmt->fetchAll();
+$query = "SELECT * FROM useraffiliation INNER JOIN client ON client.id = useraffiliation.client_id WHERE user_id = {$_SESSION['user_id']}";
+$result = mysqli_query($mysqli, $query);
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,8 +27,8 @@ include('navbar.php')
         </tr>
 
         <?php
-        if (count($results) > 0) {
-        foreach ($results as $useraffiliation) {
+        if (mysqli_num_rows($result) > 0) {
+        while ($useraffiliation = mysqli_fetch_assoc($result)) {
         $companyname = $useraffiliation['client.business_name'];
         $companypoints = $useraffiliation['points'];
 
