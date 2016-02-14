@@ -15,7 +15,7 @@ if(empty($_POST['password']))
     $errorMessage = "Please Enter your password.";
 }
 
-$query = "SELECT * FROM client WHERE email='$username' && password='$pasword'";
+$query = "SELECT * FROM client WHERE email='$username' && password='$password'";
 $query = mysqli_query($query);
 $users = mysql_num_rows($query);
 
