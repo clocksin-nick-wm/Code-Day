@@ -26,19 +26,21 @@ include('navbar.php');
         <tr>
             <th>Rewards</th>
             <th>Point Value</th>
+            <th>Description</th>
         </tr>
 
         <?php
         if (mysqli_num_rows($result) > 0) {
             while ($rewards = mysqli_fetch_assoc($result)) {
-                $consumername = $rewards['reward_name'];
-                $consumerpoints = $rewards['point_value'];
+                $rewardname = $rewards['reward_name'];
+                $valuepoints = $rewards['point_value'];
+                $rewarddescription = $rewards['description'];
 
                 echo '<tr>';
-                echo "<td>$consumername</td>";
-                echo "<td>$consumerpoints</td>";
-                ?>
-                <?php
+                echo "<td>$rewardname</td>";
+                echo "<td>$valuepoints</td>";
+                echo "<td>$rewarddescription</td>";
+                echo '</tr>';
             }
         } else {
             echo "0 results";
