@@ -3,7 +3,7 @@ require_once('connect.php');
 
 session_start();
 
-$query = "SELECT * FROM useraffiliation INNER JOIN user ON user.id = useraffiliation.user_id WHERE user_id = {$_SESSION['user_id']}";
+$query = "SELECT * FROM useraffiliation INNER JOIN users ON users.id = useraffiliation.user_id WHERE user_id = {$_SESSION['user_id']}";
 $result = mysqli_query($mysqli, $query);
 ?>
 <!DOCTYPE html>
