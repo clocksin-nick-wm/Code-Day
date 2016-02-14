@@ -45,7 +45,8 @@ if(@$_POST['formSubmit']) {
     $query = mysqli_query($mysqli, $query);
 
     if ($query) {
-        echo "Rewards Entered Successfully";
+        echo "<p style='text-align: center'>Rewards Entered Successfully</p>";
+        echo "<p style='text-align: center'><a href='rewards-input.php'>Click Here to create a new Reward</a></p>";
         die();
     }
 }
