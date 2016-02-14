@@ -27,7 +27,7 @@ if(@$_POST['formSubmit'] == "Submit")
     {
         $errorMessage = "<li>You forgot to enter your email.</li>";
     }
-    if(empty($_POST['phonenumber2']))
+    if(empty($_POST['Password']))
     {
         $errorMessage = "<li>You forgot to enter your Password.</li>";
     }
