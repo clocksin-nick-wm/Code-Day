@@ -22,8 +22,8 @@ include('navbar.php')
 
 </style>
 
-<div id="table" class="table-bordered">
-    <table id="userRewardsTable">
+
+    <table class="span5 center-table">
         <tr>
             <th>User Email</th>
             <th>Total Points</th>
@@ -47,7 +47,6 @@ include('navbar.php')
         ?>
 
     </table>
-</div>
 <?php
 
 ?>
