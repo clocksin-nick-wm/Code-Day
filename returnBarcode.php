@@ -46,6 +46,7 @@ $available_awards_query = "SELECT * FROM rewards where ";
     <h3 style="font-family:sans-serif">
     <form method="post" id="transaction_form">
         <input type="text" id="ammountSpent" placeholder="Ammount Spent">
+        <br>
         <input type="submit" value="Confirm" class="btn" id="scanNew" style="width: 174px; text-align: center; height:45px;">
     </form>
     <div id="available_rewards">
