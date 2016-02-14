@@ -10,6 +10,8 @@ if(isset($_POST['mobile'])) {
     if($_POST["mobile"] == 'true') {
         $mobile = true;
     }
+} else {
+    $mobile = false;
 }
 
 $errorMessage = "";
