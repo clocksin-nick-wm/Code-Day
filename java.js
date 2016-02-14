@@ -8,8 +8,8 @@ jQuery(function($){
         var lastname =$(this.elements.lastname).val();
         var phonenumber = $(this.elements.phonenumer).val();
         var email = $(this.elements.email).val();
-        var Password =$(this.elements.Password).val();
-        var data = {firstname: firstname, lastname: lastname, phonenumber: phonenumber, email: email, Password: Password};
+        var Password = $(this.elements.Password).val();
+        var data = {firstname: firstname, lastname: lastname, phonenumber: phonenumber, email: email, Password: Password, mobile: true};
         $.post("SighinPage.php", data, function (result) {
             console.log(result);
         });
