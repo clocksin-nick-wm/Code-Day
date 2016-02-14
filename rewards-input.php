@@ -56,13 +56,8 @@ if(@$_POST['formSubmit']) {
 
 
 <form action="rewards-input.php" method="post" class="form" id="msform">
-<<<<<<< HEAD
-    <fieldset id="msfieldset">
-    Reward Name:<input type="text" maxlength="60" name="reward_name" required>
-=======
     <fieldset id="msfieldset" style="font-family: sans-serif">
     Reward Name:<input type="text" maxlength="60" name="reward_name" required >
->>>>>>> 99ba5b0718339a0a14163d86608e83b2f2f3b269
     Reward Description:<input type="text" maxlength="255" name="description" required>
     Point Value:<input type="number" name="point_value" required>
     <button type="submit" name="formSubmit" value="1">Submit</button>
