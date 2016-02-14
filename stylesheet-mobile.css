@@ -1,0 +1,51 @@
+#QR-pic {
+    width: auto;
+    height: 250px;
+
+    margin-left: 20%;
+}
+#button1 {
+    width: 15%;
+    height: 10%;
+    margin: 3%;
+    display: inherit;
+}
+
+#button2 {
+    height: 10%;
+    width: 15%;
+    margin: 3%;
+    display: none;
+}
+
+
+
+#header {
+    position: absolute;
+    height: 10%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+}
+
+#title {
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    margin-top:-13px;
+    color: #36abcf;
+}
+
+#QR {
+    margin-top: 10%;
+    margin-left: auto;
+}
+
+#background-dark {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#list {
+    display: none;
+}
