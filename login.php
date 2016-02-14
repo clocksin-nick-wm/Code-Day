@@ -21,8 +21,11 @@ if(empty($_POST['password']))
 {
     $errorMessage = "Please Enter your password.";
 }
+if($mobile == true) {
 
-$query = "SELECT * FROM client WHERE email='$username' && password='$password'";
+}else {
+    $query = "SELECT * FROM client WHERE email='$username' && password='$password'";
+}
 $query = mysqli_query($mysqli, $query);
 $users = mysqli_num_rows($query);
 
