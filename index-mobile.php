@@ -18,6 +18,7 @@ $image_link = "http://www.qr-code-generator.com/phpqrcode/getCode.php?cht=qr&chl
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href="stylesheet-mobile.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <script src="jquery.js" type="text/javascript"></script>
     <script src="scripts-mobile.js" type="text/javascript"></script>
 </head>
