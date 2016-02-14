@@ -23,6 +23,8 @@ if($users > 0) {
     $row = mysqli_fetch_array($query);
     session_start();
     $_SESSION["user_id"] = $row['id'];
+    header("loaction: ./index.php");
+    die();
 }
 else {
     die("incorrect username or password");
