@@ -30,9 +30,9 @@ include('navbar.php');
 
         <?php
         if (mysqli_num_rows($result) > 0) {
-            while ($useraffiliation = mysqli_fetch_assoc($result)) {
-                $consumername = $useraffiliation['reward'];
-                $consumerpoints = $useraffiliation['point_value'];
+            while ($rewards = mysqli_fetch_assoc($result)) {
+                $consumername = $rewards['reward_name'];
+                $consumerpoints = $rewards['point_value'];
 
                 echo '<tr>';
                 echo "<td>$consumername</td>";
