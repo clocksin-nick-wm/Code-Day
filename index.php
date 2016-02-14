@@ -5,42 +5,74 @@ if(! isset($_SESSION['user_id']))
     header("location: ./login.html");
 
 ?>
+
 <!DOCTYPE html>
-    <html>
+<html>
 <head>
     <title>CodeDay</title>
-    <?php
-    include ('header.php');
-    ?>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="Chart.js-master/Chart.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <style>
+        div{
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-<?php
-include ('navbar.php');
-?>
 
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.php" style="font-family: 'Pacifico'; color: #3CD0E9">Points</a>
+        </div>
+        <div id="nav">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.php">Home</a></li>
+                <li><a href="user-usage.php">User Usage</a></li>
+                <li><a href="user-rewards.php">User Rewards</a></li>
+                <li><a href="rewards-input.php">Rewards Input</a> </li>
+                <li><a href="current-rewards.php">Current Rewards</a> </li>
+                <li><a href="setting.php">Settings</a></li>
+                <li><a href="logout.php" id="logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row" style=" height: 700px; width: 370px; margin-left: .3%">
         <div class="col-sm-8">
-            <h2>About Us</h2>
+            <h2 style="text-align: right;">About Us</h2>
+            <br>
             <h4>Established 2016</h4>
-            <p>We are a new up and coming business that hopes to help other business give back to their clients.</p>
+            <p style="margin-left: 10%">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
     </div>
 </div>
 
 <div class="container-fluid bg-grey">
-    <div class="row" >
+    <div class="row" style=" height: 700px; width: 350px; float: right; position: absolute; right: 0; margin-top: -37%">
         <div class="col-sm-8">
-            <h2>Our Goals</h2>
-            <h4><strong>MISSION:</strong>Help business give back to their users with rewards points</h4>
-            <p><strong>VISION:</strong> Our vision is to help user fianfoiaioag</p>
+            <h2 style="text-align: right;">Our Goals</h2>
+
+            <h4><strong>MISSION:</strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h4>
+            <p><strong>VISION:</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container" style=" margin-top: -36%; margin-left: 18%">
     <h3 class="text-center">Contact</h3>
-    <div class="row test">
+    <br>
+    <div class="row test" >
         <div class="col-md-4">
             <p>Have any server issues? Contact us</p>
             <p><span class="glyphicon glyphicon-map-marker"></span>Tempe, US</p>
@@ -64,6 +96,8 @@ include ('navbar.php');
             </div>
         </div>
     </div>
+</div>
+<div id="footer" style="height: 200px; width: auto; background-color: rgba(0, 0, 0, 0.84); margin-top: 19%;">
 </div>
 </body>
 </html>
