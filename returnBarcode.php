@@ -40,6 +40,7 @@ $user_rows = mysqli_num_rows(mysqli_query($mysqli))
     <h3 style="font-family:sans-serif">
     <form method="post" id="transaction_form">
         <input type="text" id="ammountSpent" placeholder="Ammount Spent">
+        <br>
         <input type="submit" value="Confirm" class="btn" id="scanNew" style="width: 174px; text-align: center; height:45px;">
     </form>
     <div id="available_rewards">
