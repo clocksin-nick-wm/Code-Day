@@ -94,7 +94,10 @@ include ('navbar.php');
 
     });
 </script>
-
+<h1 style="float: "><strong>About Us</strong></h1>
 <script type="text/javascript"  src="jquery.js"></script>
+<p>Point is a business application designed to help businesses give back to their clients. The
+    way these businesses give back is through rewards. Each company can give back their own rewards
+    like coupons or even in-store purchases.</p>
 </body>
 </html>
