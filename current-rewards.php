@@ -3,7 +3,7 @@ require_once('connect.php');
 
 session_start();
 
-$query = "SELECT * FROM rewards INNER JOIN client ON client.id = rewards.client_id WHERE rewards = {$_SESSION['user_id']}";
+$query = "SELECT * FROM rewards INNER JOIN client ON client.id = rewards.client_id WHERE client_id = {$_SESSION['user_id']}";
 $result = mysqli_query($mysqli, $query);
 
 if(! $result) {
