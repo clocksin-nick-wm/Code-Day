@@ -64,7 +64,7 @@ if(@$_POST['formSubmit']) {
     </fieldset>
 
 </form>
-<div id="footer" style="height: 200px; width: auto; background-color: rgba(0, 0, 0, 0.84); margin-top: 19%;">
+<div id="footer" style="height: 200px; width: auto; background-color: rgba(0, 0, 0, 0.84); margin-top: 38%;">
 </div>
 </body>
 </html>
