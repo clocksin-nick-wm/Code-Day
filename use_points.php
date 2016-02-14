@@ -12,10 +12,8 @@ $query = "SELECT * FROM useraffiliation WHERE client_id= {$_SESSION['client_id']
 $user_query = mysqli_query($mysqli, $query);
 $user_num_rows = mysqli_num_rows($user_query);
 if($user_num_rows > 0){
-    echo "Good";
     $user_rows = mysqli_fetch_array($user_query);
     $points = $user_rows['points'];
-    echo $points;
 
     $reward_query = "SELECT * FROM rewards WHERE id= {$reward_id}";
     $reward_query = mysqli_query($mysqli, $reward_query);

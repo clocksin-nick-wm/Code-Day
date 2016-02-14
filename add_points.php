@@ -28,9 +28,10 @@ if($user_num_rows > 0){
 
     echo "<br/> $new_points";
 
-    //$updateQuery = "UPDATE useraffiliation SET points= {$newPoints} WHERE client_id= {$client_id} AND user_id= {$user_id}";
-    //$updateQuery = mysqli_query($mysqli, $updateQuery);
-    //if(! $updateQuery) {
-    //    die(mysqli_error(mysqli));
-    //}
+    $updateQuery = "UPDATE useraffiliation SET points= {$new_points} WHERE client_id= {$client_id} AND user_id= {$user_id}";
+    $updateQuery = mysqli_query($mysqli, $updateQuery);
+    if(! $updateQuery) {
+        die(mysqli_error(mysqli));
+    }
+    header("location: ./barcode_reader.php");
 }

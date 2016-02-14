@@ -1,5 +1,5 @@
 <?php
-//error_reporting(0);
+error_reporting(0);
 
 require_once('connect.php');
 
@@ -45,6 +45,17 @@ if($users > 0) {
         header("location: ./index.php");
     }
     die();
+}else if($mobile == true) {
+    $query = "SELECT * FROM client WHERE email='$username' && password='$password'";
+    $query = mysqli_query($mysqli, $query);
+    $users = mysqli_num_rows($query);
+    if($users > 0) {
+        echo "<script> alert('work');</script>";
+        $row = mysqli_fetch_array($query);
+        session_start();
+        $_SESSION['client_id'] = $row['id'];
+        header("location: ./barcode_reader.php");
+    }
 }
 else {
     die("incorrect username or password");

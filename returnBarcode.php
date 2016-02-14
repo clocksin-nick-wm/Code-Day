@@ -2,8 +2,9 @@
 
 require_once("connect.php");
 
+error_reporting(0);
 session_start();
-$_SESSION['client_id'] = 3;
+
 $code = $_GET['code'];
 $query = "SELECT * FROM users WHERE id=$code";
 $results = mysqli_query($mysqli, $query);
@@ -21,10 +22,10 @@ $user_query = "SELECT * FROM useraffiliation WHERE client_id= {$_SESSION['client
 $user_query = mysqli_query($mysqli, $user_query);
 $user_num_rows = mysqli_num_rows($user_query);
 if($user_num_rows > 0){
-    echo "Good";
+
     $user_rows = mysqli_fetch_array($user_query);
     $points = $user_rows['points'];
-    echo $points;
+
 } else {
     echo "Create User";
 }
@@ -95,6 +96,11 @@ $(document).ready(function() {
         moneySpent = parseInt(moneySpent);
         moneySpent = Math.floor(moneySpent);
         window.location = "./add_points.php?spent=" + moneySpent + "&user=" + <?php echo $code ?>;
+    });
+    $("#use_pnts").click(function() {
+        $("#use_pnts").hide();
+        $("#newtrans").hide();
+        $("#available_rewards").toggle();
     });
 
     $("tr").click(function() {
