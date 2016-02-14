@@ -5,7 +5,7 @@ session_start();
 
 $query = "SELECT * FROM rewards INNER JOIN client ON client.id = rewards.client_id WHERE client_id = {$_SESSION['user_id']}";
 
-if($_POST['removeButton'])
+if(@$_POST['removeButton'])
 {
     $reward_to_del = $_POST['reward_to_delete'];
     echo "DELETE * FROM rewards WHERE reward_name='$reward_to_del'";
