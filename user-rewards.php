@@ -2,8 +2,8 @@
 
 session_start();
 
-$stmt = $dbh->prepare("SELECT * FROM cart c WHERE c.user_id = :carts");
-$stmt->execute(array(':carts' => $_GET['carts']));
+$stmt = $dbh->prepare("SELECT * FROM useraffiliation INNER JOIN client ON client.id = useraffiliation.client_id WHERE user_id = :user_id");
+$stmt->execute(array(':user_id' => $_SESSION['user_id']));
 $results = $stmt->fetchAll();
 
 
@@ -24,11 +24,24 @@ include('navbar.php')
 <div id="userRewards">
     <table id="userRewardsTable">
         <tr>
-            <th>User</th>
+            <th>Company</th>
             <th>Points</th>
         </tr>
+
+        <?php
+        if (count($results) > 0) {
+        foreach ($results as $useraffiliation) {
+        $companyname = $useraffiliation['client.business_name'];
+        $companypoints = $useraffiliation['points'];
+
+        echo '<tr>';
+        echo "<td>$companyname</td>";
+        echo "<td>$companypoints</td>";
+        ?>
+        ?>
+
         <tr>
-            <th></th>
+            <td></td>
         </tr>
     </table>
 </div>
