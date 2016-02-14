@@ -10,7 +10,7 @@ if(! $results) {
     die(mysqli_error($mysqli));
 }
 else {
-    if(! mysqli_num_rows($results > 0)) {
+    if(! mysqli_num_rows($results) > 0) {
         die("User does not exist");
     }
 }
