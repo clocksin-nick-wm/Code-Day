@@ -34,13 +34,12 @@ if($users > 0) {
     session_start();
 
     if($mobile == true) {
-        echo "logged in mobile with id" + $row['id'];
         $_SESSION["mobile_user_id"] = $row['id'];
-        //header("location: ./mobileHeader.php");
+        header("location: ./mobileHeader.php");
     }else {
 
         $_SESSION["user_id"] = $row['id'];
-        //header("location: ./index.php");
+        header("location: ./index.php");
     }
     die();
 }
