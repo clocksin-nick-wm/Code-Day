@@ -47,9 +47,7 @@ include('navbar.php');
                 $rewardname = $rewards['reward_name'];
                 $valuepoints = $rewards['point_value'];
                 $rewarddescription = $rewards['description'];
-                if (mysqli_num_rows($remove)>0){
-                    while ($remove = mysqli_fetch_assoc($delete)) {
-                        $cancel = $delete['reward_name'];
+                
 
                 echo '<tr>';
                 echo "<td>$rewardname</td>";
