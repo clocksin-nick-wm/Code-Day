@@ -62,4 +62,9 @@
     position:absolute;
     top:450px;
     left:50px;
+    font-family: Oswald;
+}
+
+td, th {
+    padding: 10px;
 }

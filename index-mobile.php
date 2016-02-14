@@ -20,9 +20,6 @@ $image_link = "http://www.qr-code-generator.com/phpqrcode/getCode.php?cht=qr&chl
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery.js" type="text/javascript"></script>
     <script src="scripts-mobile.js" type="text/javascript"></script>
-    <style>
-
-    </style>
 </head>
 <body>
 <div id="header">
@@ -49,9 +46,13 @@ $image_link = "http://www.qr-code-generator.com/phpqrcode/getCode.php?cht=qr&chl
             $companypoints = $useraffiliation['points'];
 
             echo '<tr>';
+                echo "<th>Company</th>";
+                echo "<th>Points</th>";
+            echo '</tr>';
+            echo '<tr>';
                 echo "<td>$companyname</td>";
                 echo "<td>$companypoints</td>";
-
+            echo '</tr>';
                 }
 
                 }
