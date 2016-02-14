@@ -48,6 +48,8 @@ include('navbar.php')
 <?php
 
 ?>
+<div id="footer" style="height: 310px; width: auto; background-color: rgba(0, 0, 0, 0.84); margin-top: 20%; ">
+</div>
 
 </body>
 
