@@ -37,7 +37,8 @@ if ($conn->connect_error) {
     ?>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <table id="table" class="table-bordered">
+    <table id="table" class="span5 center-table">
+        <div class="table_bordered">
         <thead>
         <tr>
             <th>Time Created</th>
@@ -69,6 +70,7 @@ if ($conn->connect_error) {
         }
         $conn->close();
     ?>
+</div>
 </div>
     </table>
 </body>
