@@ -13,12 +13,30 @@ include('navbar.php')
 ?>
 <div class="products">
     <?php
-    $current_url = urlencode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-    $results = $mysqli->query("SELECT email, userPoints, Rewards_Points FROM users ORDER BY id ASC");
-    if($results) {
-    $user_rewards = '<ul class="products">';
-    //fetch results set as object and output HTML
-    while ($obj = $results->fetch_object()) {
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "points";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+    $sql = "SELECT id, email, Reward_Points FROM users";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "id: " . $row["id"]. " - Name: " . $row["email"]. " " . $row["Rewards_Points"]. "<br>";
+        }
+    } else {
+        echo "0 results";
+    }
+    $conn->close();
+    ?>
     ?>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -37,10 +55,6 @@ include('navbar.php')
        <p><?php echo $obj->Rewards_Points; ?></p>
     </tr>
     </tbody>
-    <?php
-    }
-    }
-        ?>
 </div>
     </table>
 </body>
