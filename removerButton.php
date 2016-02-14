@@ -1,4 +1,6 @@
 <?php
+require_once ('connect.php');
+
 $reward_to_del = $_POST['reward_to_delete'];
 echo "DELETE * FROM rewards WHERE reward_name='$reward_to_del'";
 $delete_query = "DELETE * FROM rewards WHERE reward_name='$reward_to_del'";
