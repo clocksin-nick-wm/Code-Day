@@ -16,7 +16,6 @@ if(@$_POST['removeButton'])
 
 
 $result = mysqli_query($mysqli, $query);
-$remove = mysqli_query($mysqli, $delete);
 
 if(! $result) {
 
