@@ -8,7 +8,6 @@ session_start();
 if(isset($_POST['removeButton'])){
     echo $_POST['id'];
     $delete = "DELETE FROM rewards WHERE id = {$_POST['id']}";
-    echo $delete;
     $result1 = mysqli_query($mysqli, $delete);
 }
 $query = "SELECT * FROM rewards WHERE client_id= {$_SESSION['user_id']}";
@@ -51,7 +50,9 @@ include('navbar.php');
 
             }
         } else {
-            echo "0 results";
+            echo '<tr>';
+            echo "<td>0 results</td>";
+            echo '</tr>';
         }
         ?>
         </table>
