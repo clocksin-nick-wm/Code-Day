@@ -44,7 +44,7 @@ $result = mysqli_query($mysqli, $available_awards_query);
     <script src="jquery.js" type="text/javascript"></script>
     <style>
         td, th {
-            padding: 5px;
+            padding: 7px;
         }
     </style>
 </head>
@@ -72,8 +72,8 @@ $result = mysqli_query($mysqli, $available_awards_query);
                     $rewarddescription = $rewards['description'];
 
                     echo '<tr>';
-                    echo "<td>$rewardname</td>";
-                    echo "<td>$valuepoints</td>";
+                    echo "<td style='text-align: center'>$rewardname</td>";
+                    echo "<td style='text-align: right'>$valuepoints</td>";
                     echo '</tr>';
 
 
