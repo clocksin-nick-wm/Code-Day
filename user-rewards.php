@@ -14,6 +14,11 @@ $result = mysqli_query($mysqli, $query);
     include('header.php')
     ?>
 </header>
+<style>
+    td {
+        padding: 2%;
+    }
+</style>
 <body>
 <?php
 include('navbar.php')
@@ -22,8 +27,8 @@ include('navbar.php')
 <div id="userRewards">
     <table id="userRewardsTable">
         <tr>
-            <th>Company</th>
-            <th>Points</th>
+            <th>User Email</th>
+            <th>Total Points</th>
         </tr>
 
         <?php
