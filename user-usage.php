@@ -32,9 +32,9 @@ include('navbar.php')
     </thead>
     <tbody>
     <tr>
-        <td><p><?php echo $obj->id; ?></p></td>
-        <td><p><?php echo $obj->email; ?></p></td>
-        <td><p><?php echo $obj->Rewards_Points; ?></p></td>
+       <p><?php echo $obj->id; ?></p>
+        <p><?php echo $obj->email; ?></p>
+       <p><?php echo $obj->Rewards_Points; ?></p>
     </tr>
     </tbody>
     <?php
