@@ -44,6 +44,11 @@ include('navbar.php')
         </tr>
     </table>
 </div>
+<?php
+}
+
+}
+?>
 
 </body>
 
