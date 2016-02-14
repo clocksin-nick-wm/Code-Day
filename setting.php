@@ -4,11 +4,12 @@ session_start();
 require_once("connect.php");
 
 if(@$_POST['changeSubmit']) {
-    $email =$_POST['email'];
+    $client_id = $_SESSION['client_id'];
+    $email = $_POST['email'];
     $password = str_replace("'", "", $_POST['Password']);
     $points = str_replace("'", "", $_POST['points']);
 
-    $query = "INSERT INTO client (email, password, points) VALUES ('$email', '$password', '$points')";
+    $query = "UPDATE useraffiliation SET email = {$email} WHERE client_id= {$client_id}";
 
     $query = mysqli_query($mysqli, $query);
 }
