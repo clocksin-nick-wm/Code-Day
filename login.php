@@ -32,11 +32,13 @@ $users = mysqli_num_rows($query);
 if($users > 0) {
     $row = mysqli_fetch_array($query);
     session_start();
-    $_SESSION["user_id"] = $row['id'];
+
     if($mobile == true) {
         header("location: ./mobileHeader.php");
+        $_SESSION["mobile_user_id"] = $row['id'];
     }else {
         header("location: ./index.php");
+        $_SESSION["user_id"] = $row['id'];
     }
     die();
 }

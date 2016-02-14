@@ -2,8 +2,10 @@
 require_once('connect.php');
 
 session_start();
+if(! isset($_SESSION['mobile_user_id']))
+    header("location: ./loginMobile.html");
 
-$query = "SELECT * FROM useraffiliation INNER JOIN client ON client.id = useraffiliation.client_id WHERE user_id = {$_SESSION['user_id']}";
+$query = "SELECT * FROM useraffiliation INNER JOIN client ON client.id = useraffiliation.client_id WHERE user_id = {$_SESSION['mobile_user_id']}";
 $result = mysqli_query($mysqli, $query);
 ?>
 <html>
