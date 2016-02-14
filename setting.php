@@ -6,7 +6,7 @@ require_once("connect.php");
 if(@$_POST['changeSubmit']) {
     $biz_name = str_replace("'", "", $_POST['biz_name']);
     $password = str_replace("'", "", $_POST['Password']);
-    $points = str_replace("'", "", $_POST['points'])
+    $points = str_replace("'", "", $_POST['points']);
 
     $query = "INSERT INTO client (business_name, password, points) VALUES ('$biz_name', '$password', '$points')";
 
