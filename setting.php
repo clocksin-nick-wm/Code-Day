@@ -1,8 +1,23 @@
+<?php
+session_start();
+
+require_once("connect.php");
+
+if(@$_POST['changeSubmit']) {
+    $biz_name = str_replace("'", "", $_POST['biz_name']);
+    $password = str_replace("'", "", $_POST['Password']);
+    $points = str_replace("'", "", $_POST['points'])
+
+    $query = "INSERT INTO client (business_name, password, points) VALUES ('$biz_name', '$password', '$points')";
+
+    $query = mysqli_query($mysqli, $query);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <title>Settings</title>
+    <meta charset="UTF-8">
+    <title>Settings</title>
     <link href="settings.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
@@ -37,20 +52,20 @@
     </nav>
 </div>
 <div id="header" style="height: 150px; width: auto; ">
-<h1 style="text-align: center; ">Need To Change Something?</h1>
+    <h1 style="text-align: center; ">Need To Change Something?</h1>
 </div>
 <div id="form" style="height: 600px; width: 400px; position: absolute; margin-top: 2%; margin-left: 40%;">
     <form id="msform" method="post">
         <fieldset id="msfieldset" style="height: 600px; width: 400px; margin-left: .01%;">
             <h3 id="fs-subtitle" style="font-family: 'Pacifico', cursive; color: #36abcf;" >New Information</h3>
             <br>
-            <input type="text" name="firstname" placeholder="New Username"/>
+            <input type="text" name="biz_name" placeholder="New Username"/>
             <br><br>
-            <input type="text" name="lastname" placeholder="New Password" />
+            <input type="text" name="Password" placeholder="New Password" />
             <br><br>
-            <input type="number" name="phonenumber" placeholder="Point Increment" />
+            <input type="number" name="points" placeholder="Point Increment" />
             <br><br>
-            <input type="submit" name="formSubmit" value="Submit" class="btn" style="width: 174px; text-align: center; height:45px;"/>
+            <button type="submit" name="changeSubmit" value="1" style="width: 174px; text-align: center; height:45px;>Submit</button>
         </fieldset>
     </form>
 </div>
