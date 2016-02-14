@@ -4,7 +4,7 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.php" style="font-family: 'Pacifico'">Points</a>
+            <a class="navbar-brand" href="index.php" style="font-family: 'Pacifico'; color: #3cd039">Points</a>
         </div>
         <div id="nav">
         <ul class="nav navbar-nav">
