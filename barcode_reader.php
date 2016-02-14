@@ -7,7 +7,6 @@
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <script src="jquery.js" type="text/javascript"></script>
-    <script src="java.js" type="text/javascript"></script>
 </head>
 <body style="background-color: white;">
     <center>
@@ -19,12 +18,8 @@
 </body>
 <script type="text/javascript">
 
-$(document).ready(function() {
-    $("#scanNew").click(function() {
-        var ammountSpent = $("#ammountSpent").val();
-        window.location = "./forward_barcode.php?ammountSpent=" + ammountSpent;
-    });
-});
+    $(#scanNew).click(function(){
+        window.location = "http://zxing://scan/?ret=<?php echo urlencode("http://10.204.1.9/CodeDay/returnBarcode.php?code={CODE}"); ?>&SCAN_FORMATS=UPC_A,EAN_13,QR_CODE";
 
 </script>
 </html>
