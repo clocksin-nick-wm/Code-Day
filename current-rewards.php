@@ -47,7 +47,7 @@ include('navbar.php');
                 $rewardname = $rewards['reward_name'];
                 $valuepoints = $rewards['point_value'];
                 $rewarddescription = $rewards['description'];
-                
+
 
                 echo '<tr>';
                 echo "<td>$rewardname</td>";
@@ -56,7 +56,7 @@ include('navbar.php');
                 echo "<td><form method='post'><input type='hidden' name='reward_to_delete' value='$rewardname' /><button class='alert alert-danger' type='submit' name='removeButton'>Remove</button></td>";
                 echo '</tr>';
 
-                    }
+                    
                 }
             }
         } else {
