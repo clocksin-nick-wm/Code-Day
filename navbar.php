@@ -1,7 +1,3 @@
-<?php
-session_start();
-if($_SESSION)
-?>
 <link rel="stylesheet" type="text/css" href="main.css">
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
