@@ -4,11 +4,11 @@ session_start();
 require_once("connect.php");
 
 if(@$_POST['changeSubmit']) {
-    $biz_name = str_replace("'", "", $_POST['biz_name']);
+    $email = str_replace("'", "", $_POST['email']);
     $password = str_replace("'", "", $_POST['Password']);
     $points = str_replace("'", "", $_POST['points']);
 
-    $query = "INSERT INTO client (business_name, password, points) VALUES ('$biz_name', '$password', '$points')";
+    $query = "INSERT INTO client (business_name, password, points) VALUES ('$email', '$password', '$points')";
 
     $query = mysqli_query($mysqli, $query);
 }
@@ -59,7 +59,7 @@ if(@$_POST['changeSubmit']) {
         <fieldset id="msfieldset" style="height: 600px; width: 400px; margin-left: .01%;">
             <h3 id="fs-subtitle" style="font-family: 'Pacifico', cursive; color: #36abcf;" >New Information</h3>
             <br>
-            <input type="text" name="biz_name" placeholder="New Username"/>
+            <input type="text" name="email" placeholder="New Username"/>
             <br><br>
             <input type="text" name="Password" placeholder="New Password" />
             <br><br>
