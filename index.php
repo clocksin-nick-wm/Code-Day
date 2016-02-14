@@ -55,11 +55,7 @@ if(! isset($_SESSION['user_id']))
             <h2 style="text-align: right;">About Us</h2>
             <br>
             <h4>Established 2016</h4>
-<<<<<<< HEAD
             <p style="margin-left: 10%">The web application <span style="font-style: italic;">Points</span> is brought to you by a cunning team of developers. We work around the clock to provide you with a functioning bridge to your customers. The team, made up completely of high school students, created the whole thing from scratch in under 24 hours.</p>
-=======
-            <p style="margin-left: 10%">Point is an up and coming company. Point is designed to help big business manage their consumers benefits.</p>
->>>>>>> b40cb410405d72231870e30b44cb4ca123cd0a4d
         </div>
     </div>
 </div>
@@ -69,17 +65,8 @@ if(! isset($_SESSION['user_id']))
         <div class="col-sm-8">
             <h2 style="text-align: right;">Our Goals</h2>
 
-<<<<<<< HEAD
             <h4><strong>MISSION:</strong>Our mission is to provide businesses with a simple, and easily accessable way of handling customer rewards. We strive to make sure our service is safe, and impervious to internet criminals. </h4>
             <p><strong>VISION:</strong>Our vision is that <span style="font-style: italic">Points</span> will be the standard in reward services. More and more people will take advantage of the process only growing more.</p>
-=======
-            <h4><strong>MISSION:</strong>Point's goal is to give help businesses give back to their clients.</h4>
-<<<<<<< HEAD
-            <p><strong>VISION:</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
->>>>>>> 99ba5b0718339a0a14163d86608e83b2f2f3b269
-=======
-            <p><strong>VISION:</strong> We hope one day to be the biggest beneficiary rewards company.</p>
->>>>>>> b40cb410405d72231870e30b44cb4ca123cd0a4d
         </div>
     </div>
 </div>
