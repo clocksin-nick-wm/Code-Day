@@ -26,11 +26,11 @@ if(empty($_POST['Password']))
 
     $biz_name = $_POST['biz_name'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = $_POST['Password'];
 
     $query = "INSERT INTO client (business_name, email, password) VALUES ('$biz_name', '$email', '$password')";
 
-    $query = mysqli($mysqli, $query);
+    $query = mysqli_query($mysqli, $query);
 
     if($query) {
         echo "Thank God!";
