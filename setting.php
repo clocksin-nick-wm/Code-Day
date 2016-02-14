@@ -8,7 +8,7 @@ if(@$_POST['changeSubmit']) {
     $password = str_replace("'", "", $_POST['Password']);
     $points = str_replace("'", "", $_POST['points']);
 
-    $query = "INSERT INTO client (business_name, password, points) VALUES ('$email', '$password', '$points')";
+    $query = "INSERT INTO client (email, password, points) VALUES ('$email', '$password', '$points')";
 
     $query = mysqli_query($mysqli, $query);
 }
