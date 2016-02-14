@@ -38,7 +38,6 @@ include('navbar.php')
         echo "<td>$companyname</td>";
         echo "<td>$companypoints</td>";
         ?>
-        ?>
 
         <tr>
             <td></td>
