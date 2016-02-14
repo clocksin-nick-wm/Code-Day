@@ -6,6 +6,12 @@ require_once('connect.php');
 $username = $_POST['username'];
 $password = $_POST['password'];
 
+if(isset($_POST['mobile'])) {
+    if($_POST["mobile"] == 'true') {
+        $mobile = true;
+    }
+}
+
 $errorMessage = "";
 if(empty($_POST['username']))
 {
@@ -24,7 +30,11 @@ if($users > 0) {
     $row = mysqli_fetch_array($query);
     session_start();
     $_SESSION["user_id"] = $row['id'];
-    header("location: ./index.php");
+    if($mobile == true) {
+        header("location: ./mobileHeader.php");
+    }else {
+        header("location: ./index.php");
+    }
     die();
 }
 else {
