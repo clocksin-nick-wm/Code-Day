@@ -2,11 +2,9 @@
 
 session_start();
 
-$stmt = $dbh->prepare("SELECT * FROM useraffiliation INNER JOIN client ON client.id = useraffiliation.client_id WHERE client_id = :user_id");
+$stmt = $dbh->prepare("SELECT * FROM useraffiliation INNER JOIN client ON client.id = useraffiliation.client_id WHERE user_id = :user_id");
 $stmt->execute(array(':user_id' => $_SESSION['user_id']));
 $results = $stmt->fetchAll();
-
-
 ?>
 <!DOCTYPE html>
 <html>
