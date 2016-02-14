@@ -11,13 +11,13 @@
 <body style="background-color: white;">
     <center>
         <h3 id="fs-subtitle" style="font-family: 'Pacifico', cursive; color: #36abcf;" >Points</h3><br/><br/>
-        <button class="btn" id="scanNew" style="width: 174px; text-align: center; height:45px;">Submit</button>
+        <button class="btn" id="scanNew" style="width: 174px; text-align: center; height:45px;">Scan</button>
     </center>
 </form>
 </body>
 <script type="text/javascript">
 
-    $(#scanNew).click(function(){
+    $('#scanNew').click(function(){
         window.location = "http://zxing://scan/?ret=<?php echo urlencode("http://10.204.1.9/CodeDay/returnBarcode.php?code={CODE}"); ?>&SCAN_FORMATS=UPC_A,EAN_13,QR_CODE";
 
 </script>

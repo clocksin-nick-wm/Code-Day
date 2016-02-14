@@ -3,7 +3,7 @@
 require_once("connect.php");
 
 session_start();
-$_SESSION['client_id'] = 1;
+$_SESSION['client_id'] = 3;
 $code = $_GET['code'];
 $query = "SELECT * FROM users WHERE id=$code";
 $results = mysqli_query($mysqli, $query);
@@ -52,7 +52,7 @@ $result = mysqli_query($mysqli, $available_awards_query);
 <center>
     <h3 id="fs-subtitle" style="font-family: 'Pacifico', cursive; color: #36abcf;" >Points</h3>
     <h3 style="font-family:sans-serif">
-    <form method="post" id="transaction_form">
+    <form method="post" id="transaction_form" style="z-index:1;">
         <input type="text" id="ammountSpent" placeholder="Ammount Spent"><br/><br/>
         <input type="submit" value="Confirm" class="btn" id="scanNew" style="width: 174px; text-align: center; height:45px;">
     </form>
@@ -70,7 +70,7 @@ $result = mysqli_query($mysqli, $available_awards_query);
                     $valuepoints = $rewards['point_value'];
                     $rewarddescription = $rewards['description'];
 
-                    echo '<tr>';
+                    echo '<tr id="' . $rewards['id'] . '">';
                     echo "<td style='text-align: center'>$rewardname</td>";
                     echo "<td style='text-align: right'>$valuepoints</td>";
                     echo '</tr>';
@@ -90,8 +90,12 @@ $result = mysqli_query($mysqli, $available_awards_query);
 </body>
 <script>
 $(document).ready(function() {
-    //$("#transaction_form").hide();
-    $("#available_rewards").hide();
+    $("#transaction_form").hide();
+    //$("#available_rewards").hide();
+
+    $("tr").click(function() {
+        window.location = "./use_points.php?id=" + this.id + "&user=" + <?php echo $code?>;
+    })
 });
 </script>
 </html>
