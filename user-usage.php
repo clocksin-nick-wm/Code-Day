@@ -73,7 +73,7 @@ if ($conn->connect_error) {
         </div>
 </div>
     </table>
-<div id="footer" style="height: 200px; width: auto; background-color: rgba(0, 0, 0, 0.84); margin-top: 8%;">
+<div id="footer" style="height: 200px; width: auto; background-color: rgba(0, 0, 0, 0.84); margin-top: 20%;">
 </div>
 </body>
 </html>
