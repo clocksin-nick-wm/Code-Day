@@ -2,7 +2,7 @@
 
 $db_username = 'root';
 $db_password = '';
-$db_name = 'point';
+$db_name = 'points';
 $db_host = 'localhost';
 
 //connect to MySql
