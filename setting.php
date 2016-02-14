@@ -61,7 +61,7 @@ if(@$_POST['changeSubmit']) {
             <br>
             <input type="text" name="email" placeholder="New Username"/>
             <br><br>
-            <input type="text" name="Password" placeholder="New Password" />
+            <input type="password" name="Password" placeholder="New Password" />
             <br><br>
             <input type="number" name="points" placeholder="Point Increment" />
             <br><br>
