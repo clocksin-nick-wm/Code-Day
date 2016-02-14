@@ -53,11 +53,15 @@ if(@$_POST['formSubmit']) {
 
 ?>
 
-<form action="rewards-input.php" method="post" class="form">
-    Reward Name:<input type="text" maxlength="60" name="reward_name" required>
-    Reward Description:<input type="text" maxlength="255" name="description" required>
+<form action="rewards-input.php" method="post" class="form-horizontal">
+    <div class="form-group">
+
+
+    Reward Name:<input type="text" maxlength="60" name="reward_name" required><br>
+    Reward Description:<input type="text" maxlength="255" name="description" required><br>
     Point Value:<input type="number" name="point_value" required>
     <button type="submit" name="formSubmit" value="1">Submit</button>
+        </div>
 </form>
 
 </body>
