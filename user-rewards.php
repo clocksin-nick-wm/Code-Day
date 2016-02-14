@@ -29,7 +29,7 @@ include('navbar.php')
         <?php
         if (mysqli_num_rows($result) > 0) {
         while ($useraffiliation = mysqli_fetch_assoc($result)) {
-        $companyname = $useraffiliation['client.business_name'];
+        $companyname = $useraffiliation['business_name'];
         $companypoints = $useraffiliation['points'];
 
         echo '<tr>';
