@@ -23,7 +23,7 @@ if($users > 0) {
     $row = mysqli_fetch_array($query);
     session_start();
     $_SESSION["user_id"] = $row['id'];
-    header("loaction: ./index.php");
+    header("location: ./index.php");
     die();
 }
 else {
