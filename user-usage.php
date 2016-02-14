@@ -11,6 +11,7 @@
 <?php
 include('navbar.php')
 ?>
+<div class="products">
     <?php
     $current_url = urlencode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
     $results = $mysqli->query("SELECT email, userPoints, Rewards_Points FROM users ORDER BY id ASC");
@@ -40,6 +41,7 @@ include('navbar.php')
     }
     }
         ?>
+</div>
     </table>
 </body>
 </html>
