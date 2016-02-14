@@ -70,8 +70,11 @@ if ($conn->connect_error) {
         }
         $conn->close();
     ?>
-</div>
+        </div>
 </div>
     </table>
+<div id="footer" style="height: 200px; width: auto; background-color: rgba(0, 0, 0, 0.84); margin-top: 8%;">
+</div>
 </body>
 </html>
+

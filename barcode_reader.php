@@ -12,10 +12,19 @@
 <body style="background-color: white;">
     <center>
         <h3 id="fs-subtitle" style="font-family: 'Pacifico', cursive; color: #36abcf;" >Points</h3>
-        <a href="zxing://scan/?ret=<?php echo urlencode("http://10.204.1.9/CodeDay/returnBarcode.php?code={CODE}"); ?>&SCAN_FORMATS=UPC_A,EAN_13,QR_CODE" class="scan">
-            <input type="submit" name="formSubmit" value="Scan New" class="btn" style="width: 174px; text-align: center; height:45px;"/>
-        </a>
+        <input type="text" id="ammountSpent" placeholder="Ammount Spent";
+        <button class="btn" id="scanNew" style="width: 174px; text-align: center; height:45px;">Scan New</button>
     </center>
 </form>
 </body>
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $("#scanNew").click(function() {
+        var ammountSpent = $("#ammountSpent").val();
+        window.location = "./forward_barcode.php?ammountSpent=" + ammountSpent;
+    });
+});
+
+</script>
 </html>
