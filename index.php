@@ -18,86 +18,58 @@ if(! isset($_SESSION['user_id']))
 include ('navbar.php');
 ?>
 
-<canvas id="myChart" width="400" height="400"></canvas>
 
-<button id="changeValues">Change</button>
-<script>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8">
+            <h2>About Us</h2>
+            <h4>Established 2016</h4>
+            <p>We are a new up and coming business that hopes to help other business give back to their clients.</p>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-phone logo"></span>
+        </div>
+    </div>
+</div>
 
-
-
-    var twitter = 34221,
-        facebook = 55219,
-        googleP = 111213,
-        total = twitter + facebook + googleP,
-        twoTwitter = 24,
-        twoFacebook = 12,
-        twoGoogleP = 6,
-        twoTotal = twoTwitter + twoFacebook + twoGoogleP,
-        currentDataSet = 0;
-
-
-    var data = [{
-        value: twitter,
-        color: "#00aced",
-        label: "Twitter (" + Math.round((twitter / total) * 100) + "%)"
-    }, {
-        value: facebook,
-        color: "#3b5998",
-        label: "Facebook (" + Math.round((facebook / total) * 100) + "%)"
-    }, {
-        value: googleP,
-        color: "#dd4b39",
-        label: "Google Plus (" + Math.round((googleP / total) * 100) + "%)"
-    }
-
-    ];
-
-    var options = {
-        animation: true,
-        animationEasing: "easeOutBounce",
-        segmentStrokeWidth: 0
-    };
-
-    //Get the context of the canvas element we want to select
-    var c = $('#myChart');
-    var ct = c.get(0).getContext('2d');
-    var ctx = document.getElementById("myChart").getContext("2d");
-    /*************************************************************************/
-    chart = new Chart(ct).Doughnut(data, options);
-
-
-    $("#changeValues").click(function() {
-
-
-        if (currentDataSet == 0) {
-            chart.segments[0].value = twoTwitter;
-            chart.segments[1].value = twoFacebook;
-            chart.segments[2].value = twoGoogleP;
-
-            chart.segments[0].label = "Twitter (" + Math.round((twoTwitter / twoTotal) * 100) + "%)";
-            chart.segments[1].label = "Facebook (" + Math.round((twoFacebook / twoTotal) * 100) + "%)";
-            chart.segments[2].label = "Google Plus (" + Math.round((twoGoogleP / twoTotal) * 100) + "%)";
-            currentDataSet = 1;
-        } else {
-            chart.segments[0].value = twitter;
-            chart.segments[1].value = facebook;
-            chart.segments[2].value = googleP;
-
-            chart.segments[0].label = "Twitter (" + Math.round((twitter / total) * 100) + "%)";
-            chart.segments[1].label = "Facebook (" + Math.round((facebook / total) * 100) + "%)";
-            chart.segments[2].label = "Google Plus (" + Math.round((googleP / total) * 100) + "%)";
-            currentDataSet = 0;
-        }
-
-        chart.update();
-
-
-    });
-</script>
-<h1 style="float: "><strong>About Us</strong></h1>
-<script type="text/javascript"  src="jquery.js"></script>
-<p>Point is a business application designed to help businesses give back to their clients. The
-    way these businesses give back is through rewards. Each company can give back their own rewards
-    like coupons or even in-store purchases.</p>
+<div class="container-fluid bg-grey">
+    <div class="row">
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-globe logo"></span>
+        </div>
+        <div class="col-sm-8">
+            <h2>Our Goals</h2>
+            <h4><strong>MISSION:</strong>Help business give back to their users with rewards points</h4>
+            <p><strong>VISION:</strong> Our vision is to help user fianfoiaioag</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h3 class="text-center">Contact</h3>
+    <div class="row test">
+        <div class="col-md-4">
+            <p>Have any server issues? Contact us</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span>Tempe, US</p>
+            <p><span class="glyphicon glyphicon-phone"></span>Phone: 623-555-9321</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>Email: points@gmail.com</p>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <button class="btn pull-right" type="submit">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

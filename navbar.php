@@ -12,6 +12,7 @@
             <li><a href="user-usage.php">User Usage</a></li>
             <li><a href="user-rewards.php">User Rewards</a></li>
             <li><a href="rewards-input.php">Rewards Input</a> </li>
+            <li><a href="current-rewards.php">Current Rewards</a> </li>
             <li><a href="setting.php">Settings</a></li>
             <li><a href="logout.php" id="logout">Logout</a></li>
         </ul>
