@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+if(! isset($_SESSION['user_id']))
+    header("location: ./login.html");
+
+?>
 <!DOCTYPE html>
     <html>
 <head>
@@ -24,19 +31,14 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-    $sql = "SELECT id, email, Reward_Points FROM users";
+    $sql = "SELECT id, email FROM users";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo "id: " . $row["id"]. " - Name: " . $row["email"]. " " . $row["Rewards_Points"]. "<br>";
-        }
-    } else {
-        echo "0 results";
-    }
-    $conn->close();
-    ?>
+
+
     ?>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -50,11 +52,17 @@ if ($conn->connect_error) {
     </thead>
     <tbody>
     <tr>
-       <p><?php echo $obj->id; ?></p>
-        <p><?php echo $obj->email; ?></p>
-       <p><?php echo $obj->Rewards_Points; ?></p>
+        <td><?php echo $row["id"]; ?></td>
+        <td><?php echo $row["email"]; ?></td>
     </tr>
     </tbody>
+    <?php
+    }
+    } else {
+        echo "0 results";
+    }
+    $conn->close();
+    ?>
 </div>
     </table>
 </body>
