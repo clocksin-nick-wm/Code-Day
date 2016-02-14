@@ -1,8 +1,10 @@
 <link rel="stylesheet" type="text/css" href="main.css">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.php">CodeDay</a>
+            <a class="navbar-brand" href="index.php" style="font-family: 'Pacifico'">Points</a>
         </div>
         <div id="nav">
         <ul class="nav navbar-nav">
