@@ -4,7 +4,7 @@ require_once("connect.php");
 
 $code = $_GET['code'];
 $query = "SELECT * FROM users WHERE id=$code";
-$results = mysqli_query(mysqli, $query);
+$results = mysqli_query($mysqli, $query);
 
 if(! $results) {
     die(mysqli_error($mysqli));
