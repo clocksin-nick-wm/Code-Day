@@ -16,10 +16,16 @@ else {
 }
 
 $user_query = "SELECT * FROM useraffiliation WHERE client_id= {$_SESSION['client_id']} AND user_id= {$code}";
-$user_rows = mysqli_num_rows(mysqli_query($mysqli))
+$user_num_rows = mysqli_num_rows();
+if($user_rows > 0){
+    echo "Good";
+    $user_rows = mysql
+} else {
+    echo "Create User";
+}
 
 
-//$available_awards_query = "SELECT * FROM rewards where ";
+$available_awards_query = "SELECT * FROM rewards where ";
 
 
 
