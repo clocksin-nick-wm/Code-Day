@@ -6,7 +6,6 @@ session_start();
 
 
 if(isset($_POST['removeButton'])){
-    echo $_POST['id'];
     $delete = "DELETE FROM rewards WHERE id = {$_POST['id']}";
     $result1 = mysqli_query($mysqli, $delete);
 }
@@ -56,7 +55,7 @@ include('navbar.php');
         }
         ?>
         </table>
-    <div id="footer" style="height: 100px; width: auto; background-color: rgba(0, 0, 0, 0.84); margin-top: 20%; ">
+    <div id="footer" style="height: 100px; width: auto; background-color: rgba(0, 0, 0, 0.84); margin-top: 30%; ">
     </div>
 
 </body>

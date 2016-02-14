@@ -2,6 +2,8 @@
 
 require_once("connect.php");
 
+session_start();
+$_SESSION['client_id'] = 1;
 $code = $_GET['code'];
 $query = "SELECT * FROM users WHERE id=$code";
 $results = mysqli_query($mysqli, $query);
@@ -16,13 +18,20 @@ else {
 }
 
 $user_query = "SELECT * FROM useraffiliation WHERE client_id= {$_SESSION['client_id']} AND user_id= {$code}";
-$user_rows = mysqli_num_rows(mysqli_query($mysqli))
+$user_query = mysqli_query($mysqli, $user_query);
+$user_num_rows = mysqli_num_rows($user_query);
+if($user_num_rows > 0){
+    echo "Good";
+    $user_rows = mysqli_fetch_array($user_query);
+    $points = $user_rows['points'];
+    echo $points;
+} else {
+    echo "Create User";
+}
 
 
-//$available_awards_query = "SELECT * FROM rewards where ";
-
-
-
+$available_awards_query = "SELECT * FROM rewards where client_id= {$_SESSION['client_id']} AND point_value <= {$points}";
+$result = mysqli_query($mysqli, $available_awards_query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +42,11 @@ $user_rows = mysqli_num_rows(mysqli_query($mysqli))
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <script src="jquery.js" type="text/javascript"></script>
+    <style>
+        td, th {
+            padding: 7px;
+        }
+    </style>
 </head>
 <body style="background-color: white;">
 <center>
@@ -43,7 +57,33 @@ $user_rows = mysqli_num_rows(mysqli_query($mysqli))
         <input type="submit" value="Confirm" class="btn" id="scanNew" style="width: 174px; text-align: center; height:45px;">
     </form>
     <div id="available_rewards">
-        filler data
+        <table class="span5 center-table">
+            <tr>
+                <th>Rewards</th>
+                <th>Point Value</th>
+            </tr>
+
+            <?php
+            if (mysqli_num_rows($result) > 0) {
+                while ($rewards = mysqli_fetch_assoc($result)) {
+                    $rewardname = $rewards['reward_name'];
+                    $valuepoints = $rewards['point_value'];
+                    $rewarddescription = $rewards['description'];
+
+                    echo '<tr>';
+                    echo "<td style='text-align: center'>$rewardname</td>";
+                    echo "<td style='text-align: right'>$valuepoints</td>";
+                    echo '</tr>';
+
+
+                }
+            } else {
+                echo '<tr>';
+                echo "<td>0 results</td>";
+                echo '</tr>';
+            }
+            ?>
+        </table>
     </div>
 </center>
 </form>
@@ -51,7 +91,7 @@ $user_rows = mysqli_num_rows(mysqli_query($mysqli))
 <script>
 $(document).ready(function() {
     $("#transaction_form").hide();
-    $("#available_rewards").hide();
+    //$("#available_rewards").hide();
 });
 </script>
 </html>

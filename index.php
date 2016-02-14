@@ -65,8 +65,13 @@ if(! isset($_SESSION['user_id']))
         <div class="col-sm-8">
             <h2 style="text-align: right;">Our Goals</h2>
 
+<<<<<<< HEAD
             <h4><strong>MISSION:</strong>Our mission is to provide businesses with a simple, and easily accessable way of handling customer rewards. We strive to make sure our service is safe, and impervious to internet criminals. </h4>
             <p><strong>VISION:</strong>Our vision is that <span style="font-style: italic">Points</span> will be the standard in reward services. More and more people will take advantage of the process only growing more.</p>
+=======
+            <h4><strong>MISSION:</strong>Point's goal is to give help businesses give back to their clients.</h4>
+            <p><strong>VISION:</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+>>>>>>> 99ba5b0718339a0a14163d86608e83b2f2f3b269
         </div>
     </div>
 </div>
