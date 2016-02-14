@@ -9,7 +9,9 @@
     margin-left: -200px;
     margin-top: -200px;
 }
-
-#table {
-
+table {
+    margin-left: 800px;
+}
+th {
+    padding: 29px;
 }
