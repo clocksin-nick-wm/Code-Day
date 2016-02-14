@@ -65,7 +65,7 @@ if(! isset($_SESSION['user_id']))
         <div class="col-sm-8">
             <h2 style="text-align: right;">Our Goals</h2>
 
-            <h4><strong>MISSION:</strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h4>
+            <h4><strong>MISSION:</strong>Point's goal is to give help businesses give back to their clients.</h4>
             <p><strong>VISION:</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
     </div>
