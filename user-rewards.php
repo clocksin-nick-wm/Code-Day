@@ -8,22 +8,21 @@ $result = mysqli_query($mysqli, $query);
 ?>
 <!DOCTYPE html>
 <html>
-<header>
+<head>
     <title>User Usage</title>
     <?php
     include('header.php')
     ?>
-</header>
-<style>
-    td {
-        padding: 4%;
-    }
-</style>
+</head>
 <body>
 <?php
 include('navbar.php')
 ?>
-
+<style>
+    td, tr {
+        padding: 6%;
+    }
+</style>
 <div id="userRewards">
     <table id="userRewardsTable">
         <tr>
