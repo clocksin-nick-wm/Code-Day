@@ -13,7 +13,7 @@
     <center>
         <h3 id="fs-subtitle" style="font-family: 'Pacifico', cursive; color: #36abcf;" >Points</h3>
         <a href="zxing://scan/?ret=<?php echo urlencode("http://10.204.1.9/CodeDay/returnBarcode.php?code={CODE}"); ?>&SCAN_FORMATS=UPC_A,EAN_13,QR_CODE" class="scan">
-            <input type="submit" name="formSubmit" value="Scan New" class="btn" style="width: 174px; text-align: center; height:45px;"/>
+            <button class="btn" style="width: 174px; text-align: center; height:45px;">Scan New</button>
         </a>
     </center>
 </form>
