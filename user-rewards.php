@@ -22,7 +22,7 @@ include('navbar.php')
 
 </style>
 
-<div id="userRewards">
+<div id="table" class="table-bordered">
     <table id="userRewardsTable">
         <tr>
             <th>User Email</th>
@@ -39,16 +39,17 @@ include('navbar.php')
         echo "<td>$consumername</td>";
         echo "<td>$consumerpoints</td>";
         ?>
+            <?php
+        }
+        } else {
+            echo "0 results";
+        }
+        ?>
 
-        <tr>
-            <td></td>
-        </tr>
     </table>
 </div>
 <?php
-}
 
-}
 ?>
 
 </body>

@@ -37,10 +37,10 @@ if ($conn->connect_error) {
     ?>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <table id="table">
+    <table id="table" class="table-bordered">
         <thead>
         <tr>
-            <th>ID</th>
+            <th>Time Created</th>
             <th>User Email</th>
             <th>Spent/Earned</th>
         </tr>
@@ -50,7 +50,7 @@ if ($conn->connect_error) {
             <?php
             if (mysqli_num_rows($result) > 0) {
             while ($useraffiliation = mysqli_fetch_assoc($result)) {
-            $consumerid = $useraffiliation['id'];
+            $consumerid = $useraffiliation['time_creation'];
             $consumeremail = $useraffiliation['email'];
             $consumerpoints = $useraffiliation['points'];
 
