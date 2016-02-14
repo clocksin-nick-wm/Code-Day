@@ -16,7 +16,7 @@ if(empty($_POST['password']))
 }
 
 $query = "SELECT * FROM client WHERE email='$username' && password='$password'";
-$query = mysqli_query($query);
+$query = mysqli_query($mysqli, $query);
 $users = mysql_num_rows($query);
 
 if($users > 0) {
