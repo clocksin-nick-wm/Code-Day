@@ -3,11 +3,12 @@ session_start();
 
 require_once("connect.php");
 
+$client_id = $_SESSION['client_id'];
+$email = $_POST['email'];
+$password = str_replace("'", "", $_POST['Password']);
+$points = str_replace("'", "", $_POST['points']);
+
 if(@$_POST['changeSubmit']) {
-    $client_id = $_SESSION['client_id'];
-    $email = $_POST['email'];
-    $password = str_replace("'", "", $_POST['Password']);
-    $points = str_replace("'", "", $_POST['points']);
 
     $query = "UPDATE useraffiliation SET email = {$email} WHERE client_id= {$client_id}";
 
