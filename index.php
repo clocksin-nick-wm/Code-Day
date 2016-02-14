@@ -55,7 +55,7 @@ if(! isset($_SESSION['user_id']))
             <h2 style="text-align: right;">About Us</h2>
             <br>
             <h4>Established 2016</h4>
-            <p style="margin-left: 10%">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p style="margin-left: 10%">Point is an up and coming company. Point is designed to help big business manage their consumers benefits.</p>
         </div>
     </div>
 </div>
@@ -66,7 +66,7 @@ if(! isset($_SESSION['user_id']))
             <h2 style="text-align: right;">Our Goals</h2>
 
             <h4><strong>MISSION:</strong>Point's goal is to give help businesses give back to their clients.</h4>
-            <p><strong>VISION:</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p><strong>VISION:</strong> We hope one day to be the biggest beneficiary rewards company.</p>
         </div>
     </div>
 </div>
