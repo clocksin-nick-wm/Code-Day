@@ -4,7 +4,7 @@ session_start();
 require_once("connect.php");
 
 if(@$_POST['changeSubmit']) {
-    $email = str_replace("'", "", $_POST['email']);
+    $email =$_POST['email'];
     $password = str_replace("'", "", $_POST['Password']);
     $points = str_replace("'", "", $_POST['points']);
 
@@ -59,7 +59,7 @@ if(@$_POST['changeSubmit']) {
         <fieldset id="msfieldset" style="height: 600px; width: 400px; margin-left: .01%;">
             <h3 id="fs-subtitle" style="font-family: 'Pacifico', cursive; color: #36abcf;" >New Information</h3>
             <br>
-            <input type="text" name="email" placeholder="New Username"/>
+            <input type="text" name="email" placeholder="Email"/>
             <br><br>
             <input type="password" name="Password" placeholder="New Password" />
             <br><br>
