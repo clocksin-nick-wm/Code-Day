@@ -26,17 +26,11 @@ include ('navbar.php');
             <h4>Established 2016</h4>
             <p>We are a new up and coming business that hopes to help other business give back to their clients.</p>
         </div>
-        <div class="col-sm-4">
-            <span class="glyphicon glyphicon-phone logo"></span>
-        </div>
     </div>
 </div>
 
 <div class="container-fluid bg-grey">
-    <div class="row">
-        <div class="col-sm-4">
-            <span class="glyphicon glyphicon-globe logo"></span>
-        </div>
+    <div class="row" >
         <div class="col-sm-8">
             <h2>Our Goals</h2>
             <h4><strong>MISSION:</strong>Help business give back to their users with rewards points</h4>
@@ -65,7 +59,7 @@ include ('navbar.php');
             <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
             <div class="row">
                 <div class="col-md-12 form-group">
-                    <button class="btn pull-right" type="submit">Send</button>
+                    <button class="btn pull-right" type="submit" style="margin-top: 20px;">Send</button>
                 </div>
             </div>
         </div>
