@@ -1,4 +1,6 @@
 <link rel="stylesheet" type="text/css" href="main.css">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
