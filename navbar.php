@@ -11,6 +11,7 @@
             <li class="active"><a href="index.php">Home</a></li>
             <li><a href="user-usage.php">User Usage</a></li>
             <li><a href="user-rewards.php">User Rewards</a></li>
+            <li><a href="rewards-input.php">Rewards Input</a> </li>
             <li><a href="setting.php">Settings</a></li>
             <li><a href="logout.php" id="logout">Logout</a></li>
         </ul>
