@@ -8,7 +8,7 @@
         </div>
         <div id="nav">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="user-usage.php">User Usage</a></li>
                 <li><a href="user-rewards.php">User Rewards</a></li>
                 <li><a href="rewards-input.php">Rewards Input</a> </li>
