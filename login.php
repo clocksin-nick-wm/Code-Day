@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 
 require_once('connect.php');
 
@@ -22,7 +22,7 @@ if(empty($_POST['password']))
     $errorMessage = "Please Enter your password.";
 }
 if($mobile == true) {
-
+    $query = "SELECT * FROM users WHERE email='$username' && password='$password'";
 }else {
     $query = "SELECT * FROM client WHERE email='$username' && password='$password'";
 }
@@ -32,10 +32,13 @@ $users = mysqli_num_rows($query);
 if($users > 0) {
     $row = mysqli_fetch_array($query);
     session_start();
-    $_SESSION["user_id"] = $row['id'];
+
     if($mobile == true) {
-        header("location: ./mobileHeader.php");
+        $_SESSION["mobile_user_id"] = $row['id'];
+        header("location: ./index-mobile.php");
     }else {
+
+        $_SESSION["user_id"] = $row['id'];
         header("location: ./index.php");
     }
     die();

@@ -2,9 +2,16 @@
 require_once('connect.php');
 
 session_start();
+if(! isset($_SESSION['mobile_user_id']))
+    header("location: ./loginMobile.html");
 
-$query = "SELECT * FROM useraffiliation INNER JOIN client ON client.id = useraffiliation.client_id WHERE user_id = {$_SESSION['user_id']}";
+$query = "SELECT * FROM useraffiliation INNER JOIN client ON client.id = useraffiliation.client_id WHERE user_id = {$_SESSION['mobile_user_id']}";
 $result = mysqli_query($mysqli, $query);
+
+$image_link = "http://www.qr-code-generator.com/phpqrcode/getCode.php?cht=qr&chl=" . $_SESSION['mobile_user_id'] . "&chs=180x180&choe=UTF-8&chld=L|-0"
+
+
+
 ?>
 <html>
 <head>
@@ -25,7 +32,7 @@ $result = mysqli_query($mysqli, $query);
 </div>
 <div id="center-container">
     <div id="QR">
-        <img src="http://www.qrstuff.com/images/sample.png" id="QR-pic">
+        <img src=<?php echo "'$image_link'" ?> id="QR-pic">
     </div>
 </div>
 <div id="dropdown-container">

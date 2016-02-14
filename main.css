@@ -10,7 +10,7 @@
     margin-top: -200px;
 }
 table {
-    margin-left: 800px;
+    
 }
 th {
     padding: 29px;
@@ -19,4 +19,9 @@ th {
 td {
     padding: 29px;
     text-align: center;
+}
+.center-table
+{
+    margin: 0 auto !important;
+    float: none !important;
 }

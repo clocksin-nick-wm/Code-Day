@@ -8,7 +8,6 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <script src="jquery.js" type="text/javascript"></script>
-    <script src="javajava.js" type="text/javascript"></script>
     <style>
         a {
             color:#36abcf;
@@ -17,13 +16,19 @@
     </style>
 </head>`
 <body style="background-color: white;">
-<form id="msform" method="post">
+<form id="msform" method="post" action="./login.php">
     <fieldset id="msfieldset">
         <h3 id="fs-subtitle" style="font-family: 'Pacifico', cursive; color: #36abcf; margin-left: 15%;" >Login</h3>
         <br>
+<<<<<<< HEAD
         <input type="text" name="email" placeholder="Email" id="1234" required/>
         <br><br>
         <input type="password" name="Password" placeholder="Password" class="1234" required/>
+=======
+        <input type="text" name="username" placeholder="Email" id="1234"/>
+        <br><br>
+        <input type="password" name="password" placeholder="Password" class="1234"/>
+>>>>>>> d7b1b65d36043aebbeb6faa38a99b0c7f760a486
         <br><br>
         <input type="hidden" name="mobile" value="true" />
         <input type="submit" name="formSubmit" value="Login"  class="btn" style="width: 174px; text-align: center; height:45px; margin-left: 4%"/>
