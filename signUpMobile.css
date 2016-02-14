@@ -1,0 +1,52 @@
+#msform {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+#fs-subtitle {
+
+    font-size: 50px;
+}
+
+#msfieldset {
+    padding-left: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color:  white;
+    border-color: transparent;
+}
+
+input{
+    border:none;
+    border-bottom: 1px solid #1B246F;
+    padding-top:15px;
+    font-size:18px;
+    height: 20px;
+    width: 62%;
+    padding-left: 5%;
+    outline:none;
+    -webkit-appearance:none;
+    box-shadow:none;
+    -webkit-box-shadow:none;
+}
+
+.btn {
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #36abcf;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #4885a6;
+    text-decoration: none;
+}}
