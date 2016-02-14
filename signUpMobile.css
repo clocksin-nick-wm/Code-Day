@@ -32,6 +32,7 @@ input{
     -webkit-appearance:none;
     box-shadow:none;
     -webkit-box-shadow:none;
+    color: #2d2d2d;
 }
 
 .btn {
@@ -49,4 +50,4 @@ input{
 .btn:hover {
     background: #4885a6;
     text-decoration: none;
-}}
+}};

@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 
 require_once('connect.php');
 
@@ -10,6 +10,8 @@ if(isset($_POST['mobile'])) {
     if($_POST["mobile"] == 'true') {
         $mobile = true;
     }
+} else {
+    $mobile = false;
 }
 
 $errorMessage = "";
@@ -22,7 +24,7 @@ if(empty($_POST['password']))
     $errorMessage = "Please Enter your password.";
 }
 if($mobile == true) {
-
+    $query = "SELECT * FROM users WHERE email='$username' && password='$password'";
 }else {
     $query = "SELECT * FROM client WHERE email='$username' && password='$password'";
 }
@@ -34,13 +36,12 @@ if($users > 0) {
     session_start();
 
     if($mobile == true) {
-        echo "logged in mobile with id" + $row['id'];
         $_SESSION["mobile_user_id"] = $row['id'];
-        //header("location: ./mobileHeader.php");
+        header("location: ./index-mobile.php");
     }else {
 
         $_SESSION["user_id"] = $row['id'];
-        //header("location: ./index.php");
+        header("location: ./index.php");
     }
     die();
 }

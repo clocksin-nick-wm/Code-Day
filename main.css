@@ -10,7 +10,7 @@
     margin-top: -200px;
 }
 table {
-    
+
 }
 th {
     padding: 29px;
@@ -25,3 +25,16 @@ td {
     margin: 0 auto !important;
     float: none !important;
 }
+<<<<<<< HEAD
+=======
+.logo {
+    font-size: 200px;
+    color: #3CD0E9;
+}
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+}
+>>>>>>> b3e8f30bc2c3ab4527a060e445f5da5565caa4a8

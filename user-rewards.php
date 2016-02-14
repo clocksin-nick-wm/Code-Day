@@ -18,9 +18,7 @@ $result = mysqli_query($mysqli, $query);
 <?php
 include('navbar.php')
 ?>
-<style>
 
-</style>
 
 
     <table class="span5 center-table">

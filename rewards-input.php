@@ -45,7 +45,8 @@ if(@$_POST['formSubmit']) {
     $query = mysqli_query($mysqli, $query);
 
     if ($query) {
-        echo "Rewards Entered Successfully";
+        echo "<p style='text-align: center'>Rewards Entered Successfully</p>";
+        echo "<p style='text-align: center'><a href='rewards-input.php'>Click Here to create a new Reward</a></p>";
         die();
     }
 }
@@ -53,15 +54,15 @@ if(@$_POST['formSubmit']) {
 
 ?>
 
-<form action="rewards-input.php" method="post" class="form-horizontal">
-    <div class="form-group">
 
-
-    Reward Name:<input type="text" maxlength="60" name="reward_name" required><br>
-    Reward Description:<input type="text" maxlength="255" name="description" required><br>
+<form action="rewards-input.php" method="post" class="form" id="msform">
+    <fieldset id="msfieldset">
+    Reward Name:<input type="text" maxlength="60" name="reward_name" required >
+    Reward Description:<input type="text" maxlength="255" name="description" required>
     Point Value:<input type="number" name="point_value" required>
     <button type="submit" name="formSubmit" value="1">Submit</button>
-        </div>
+    </fieldset>
+
 </form>
 
 </body>

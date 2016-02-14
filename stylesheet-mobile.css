@@ -9,6 +9,9 @@
     height: 10%;
     margin: 3%;
     display: inherit;
+    position:absolute;
+    top:350px;
+    left:20px;
 }
 
 #button2 {
@@ -16,6 +19,9 @@
     width: 15%;
     margin: 3%;
     display: none;
+    position:absolute;
+    top:350px;
+    left:20px;
 }
 
 
@@ -37,9 +43,12 @@
     color: #36abcf;
 }
 
-#QR {
-    margin-top: 10%;
-    margin-left: auto;
+#QR-pic {
+    position: absolute;
+    height: 250px;
+    left: 50%;
+    margin-left: -125px;
+    top: 100px;
 }
 
 #background-dark {
@@ -48,4 +57,15 @@
 
 #list {
     display: none;
+}
+#list-table {
+    position:absolute;
+    top:450px;
+    left:50px;
+    font-family: Oswald;
+    color: #2d2d2d;
+}
+
+td, th {
+    padding: 15px;
 }
