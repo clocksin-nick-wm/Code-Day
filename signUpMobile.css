@@ -21,8 +21,32 @@
 }
 
 input{
-    border-bottom: 2px solid #1B246F;
-    height: 40px;
-    width: 60%;
-    padding-left: 8%;
+    border:none;
+    border-bottom: 1px solid #1B246F;
+    padding-top:15px;
+    font-size:18px;
+    height: 20px;
+    width: 62%;
+    padding-left: 5%;
+    outline:none;
+    -webkit-appearance:none;
+    box-shadow:none;
+    -webkit-box-shadow:none;
 }
+
+.btn {
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #36abcf;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #4885a6;
+    text-decoration: none;
+}}
