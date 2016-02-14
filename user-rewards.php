@@ -18,12 +18,10 @@ $result = mysqli_query($mysqli, $query);
 <?php
 include('navbar.php')
 ?>
-<style>
 
-</style>
 
-<div id="userRewards">
-    <table id="userRewardsTable">
+
+    <table class="span5 center-table">
         <tr>
             <th>User Email</th>
             <th>Total Points</th>
@@ -39,16 +37,16 @@ include('navbar.php')
         echo "<td>$consumername</td>";
         echo "<td>$consumerpoints</td>";
         ?>
+            <?php
+        }
+        } else {
+            echo "0 results";
+        }
+        ?>
 
-        <tr>
-            <td></td>
-        </tr>
     </table>
-</div>
 <?php
-}
 
-}
 ?>
 
 </body>

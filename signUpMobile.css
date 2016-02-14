@@ -32,6 +32,7 @@ input{
     -webkit-appearance:none;
     box-shadow:none;
     -webkit-box-shadow:none;
+    color: #2d2d2d;
 }
 
 .btn {

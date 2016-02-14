@@ -1,0 +1,71 @@
+#QR-pic {
+    width: auto;
+    height: 250px;
+
+    margin-left: 20%;
+}
+#button1 {
+    width: 15%;
+    height: 10%;
+    margin: 3%;
+    display: inherit;
+    position:absolute;
+    top:350px;
+    left:20px;
+}
+
+#button2 {
+    height: 10%;
+    width: 15%;
+    margin: 3%;
+    display: none;
+    position:absolute;
+    top:350px;
+    left:20px;
+}
+
+
+
+#header {
+    position: absolute;
+    height: 10%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+}
+
+#title {
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    margin-top:-13px;
+    color: #36abcf;
+}
+
+#QR-pic {
+    position: absolute;
+    height: 250px;
+    left: 50%;
+    margin-left: -125px;
+    top: 100px;
+}
+
+#background-dark {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#list {
+    display: none;
+}
+#list-table {
+    position:absolute;
+    top:450px;
+    left:50px;
+    font-family: Oswald;
+    color: #2d2d2d;
+}
+
+td, th {
+    padding: 15px;
+}
