@@ -16,7 +16,7 @@ $result = mysqli_query($mysqli, $query);
 </header>
 <style>
     td {
-        padding: 2%;
+        padding: 4%;
     }
 </style>
 <body>
