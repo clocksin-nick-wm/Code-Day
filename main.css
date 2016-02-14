@@ -35,6 +35,7 @@ td {
         margin: 25px 0;
     }
 }
+<<<<<<< HEAD
 @import "compass/css3";
 
 // More practical CSS...
@@ -111,3 +112,6 @@ h1 {
     letter-spacing: -1px;
     color: #34495E;
 }
+=======
+
+>>>>>>> 94d14a962c8805ed5a22121e0e93d3cf5f7f820a
