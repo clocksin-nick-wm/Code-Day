@@ -25,9 +25,9 @@ if(empty($_POST['Password']))
     $errorMessage = "<li>You forgot to enter your Password.</li>";
 }
 
-    $biz_name = $_POST['biz_name'];
-    $email = $_POST['email'];
-    $password = $_POST['Password'];
+    $biz_name = str_replace("'", "", $_POST['biz_name']);
+    $email = str_replace("'", "", $_POST['email']);
+    $password = str_replace("'", "", $_POST['Password']);
 
     $query = "INSERT INTO client (business_name, email, password) VALUES ('$biz_name', '$email', '$password')";
 

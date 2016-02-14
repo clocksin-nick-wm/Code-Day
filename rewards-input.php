@@ -35,9 +35,9 @@ if(@$_POST['formSubmit']) {
         $errorMessage = "<li>You forgot to enter your Password.</li>";
     }
 
-    $name = $_POST['reward_name'];
+    $name = str_replace("'", "", $_POST['reward_name']);
     $point = $_POST['point_value'];
-    $description = $_POST['description'];
+    $description = str_replace("'", "", $_POST['description']);
     $client = $_SESSION['user_id'];
 
     $query = "INSERT INTO rewards (reward_name, point_value, description, client_id) VALUES ('$name', '$point', '$description', '$client')";
