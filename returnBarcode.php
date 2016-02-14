@@ -52,10 +52,8 @@ $result = mysqli_query($mysqli, $available_awards_query);
 <center>
     <h3 id="fs-subtitle" style="font-family: 'Pacifico', cursive; color: #36abcf;" >Points</h3>
     <h3 style="font-family:sans-serif">
-    <form method="post" id="transaction_form" style="z-index:1;">
-        <input type="text" id="ammountSpent" placeholder="Ammount Spent"><br/><br/>
-        <input type="submit" value="Confirm" class="btn" id="scanNew" style="width: 174px; text-align: center; height:45px;">
-    </form>
+        <button style="width:200px" class="btn" id="newtrans">New Transaction</button><br/>
+        <button style="width:200px" class="btn" id="use_pnts">Use Points</button>
     <div id="available_rewards">
         <table class="span5 center-table">
             <tr>
@@ -90,8 +88,14 @@ $result = mysqli_query($mysqli, $available_awards_query);
 </body>
 <script>
 $(document).ready(function() {
-    $("#transaction_form").hide();
-    //$("#available_rewards").hide();
+    $("#available_rewards").hide();
+
+    $("#newtrans").click(function() {
+        var moneySpent = prompt("How much money was spent?");
+        moneySpent = parseInt(moneySpent);
+        moneySpent = Math.floor(moneySpent);
+        window.location = "./add_points.php?spent=" + moneySpent + "&user=" + <?php echo $code ?>;
+    });
 
     $("tr").click(function() {
         window.location = "./use_points.php?id=" + this.id + "&user=" + <?php echo $code?>;
