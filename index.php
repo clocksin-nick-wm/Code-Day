@@ -55,7 +55,7 @@ if(! isset($_SESSION['user_id']))
             <h2 style="text-align: right;">About Us</h2>
             <br>
             <h4>Established 2016</h4>
-            <p style="margin-left: 10%">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p style="margin-left: 10%">The web application <span style="font-style: italic;">Points</span> is brought to you by a cunning team of developers. We work around the clock to provide you with a functioning bridge to your customers. The team, made up completely of high school students, created the whole thing from scratch in under 24 hours.</p>
         </div>
     </div>
 </div>
@@ -65,8 +65,8 @@ if(! isset($_SESSION['user_id']))
         <div class="col-sm-8">
             <h2 style="text-align: right;">Our Goals</h2>
 
-            <h4><strong>MISSION:</strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h4>
-            <p><strong>VISION:</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <h4><strong>MISSION:</strong>Our mission is to provide businesses with a simple, and easily accessable way of handling customer rewards. We strive to make sure our service is safe, and impervious to internet criminals. </h4>
+            <p><strong>VISION:</strong>Our vision is that <span style="font-style: italic">Points</span> will be the standard in reward services. More and more people will take advantage of the process only growing more.</p>
         </div>
     </div>
 </div>
