@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 
 require_once('connect.php');
 
@@ -22,7 +22,7 @@ if(empty($_POST['password']))
     $errorMessage = "Please Enter your password.";
 }
 if($mobile == true) {
-
+    $query = "SELECT * FROM users WHERE email='$username' && password='$password'";
 }else {
     $query = "SELECT * FROM client WHERE email='$username' && password='$password'";
 }
