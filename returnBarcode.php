@@ -42,6 +42,11 @@ $result = mysqli_query($mysqli, $available_awards_query);
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <script src="jquery.js" type="text/javascript"></script>
+    <style>
+        td, th {
+            padding: 5px;
+        }
+    </style>
 </head>
 <body style="background-color: white;">
 <center>
