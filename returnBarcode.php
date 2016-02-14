@@ -52,8 +52,14 @@ $result = mysqli_query($mysqli, $available_awards_query);
 <center>
     <h3 id="fs-subtitle" style="font-family: 'Pacifico', cursive; color: #36abcf;" >Points</h3>
     <h3 style="font-family:sans-serif">
+<<<<<<< HEAD
+    <form method="post" id="transaction_form"><br/><br/><br/>
+        <input type="text" name="amount" placeholder="Amount" id="amount" required/>
+        <br>
+=======
     <form method="post" id="transaction_form">
         <input type="text" id="ammountSpent" placeholder="Ammount Spent">
+>>>>>>> c4546c0d30ff0731dde235130db7c1880fe96f2a
         <input type="submit" value="Confirm" class="btn" id="scanNew" style="width: 174px; text-align: center; height:45px;">
     </form>
     <div id="available_rewards">
@@ -90,8 +96,8 @@ $result = mysqli_query($mysqli, $available_awards_query);
 </body>
 <script>
 $(document).ready(function() {
-    $("#transaction_form").hide();
-    //$("#available_rewards").hide();
+    //$("#transaction_form").hide();
+    $("#available_rewards").hide();
 });
 </script>
 </html>
