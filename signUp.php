@@ -37,5 +37,3 @@ if(empty($_POST['Password']))
         echo "Thank God!";
         die();
     }
-
-
